@@ -34,6 +34,5 @@ public class Main {
     public static void printPizzaInfo(Pizza pizza) {
         MenuVisitor menuVisitor = new MenuVisitor();
         pizza.accept(menuVisitor);
-        menuVisitor.info.printInfo();
     }
 }
