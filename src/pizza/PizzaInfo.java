@@ -5,7 +5,7 @@ public class PizzaInfo {
     public int cost;
     public String ingredients;
 
-    void printInfo() {
+    public void printInfo() {
         System.out.println("Name: " + name);
         System.out.println("Cost: " + cost + "$");
         System.out.println("Ingredients: " + ingredients);

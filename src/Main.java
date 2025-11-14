@@ -2,6 +2,7 @@ import pizza.HavaiiPizza;
 import pizza.PepperoniPizza;
 import pizza.Pizza;
 import visitor.CostVisitor;
+import visitor.MenuVisitor;
 import visitor.PizzaIngridientsVisitor;
 import visitor.Visitor;
 
@@ -24,5 +25,15 @@ public class Main {
         System.out.println("---PIZZA COST---");
         pepperoni.accept(costVisitor);
         hawaii.accept(costVisitor);
+
+
+        System.out.println("----- MENU -----");
+        printPizzaInfo(pepperoni);
+        printPizzaInfo(hawaii);
+    }
+    public static void printPizzaInfo(Pizza pizza) {
+        MenuVisitor menuVisitor = new MenuVisitor();
+        pizza.accept(menuVisitor);
+        menuVisitor.info.printInfo();
     }
 }
