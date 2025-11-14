@@ -13,4 +13,5 @@ public class PizzaIngridientsVisitor implements Visitor {
     public void visit(HavaiiPizza havaiiPizza) {
         System.out.println("Havaii Pizza ingridients: are pineapple, cheese, dough");
     }
+
 }
